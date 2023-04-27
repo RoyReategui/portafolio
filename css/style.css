@@ -1,3 +1,292 @@
-header {
-  background-color: red;
-  color: red; }
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  display: block;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */
+  object-fit: cover;
+  /* (Opcional) */
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  /* (Opcional) */
+  hyphens: auto;
+  /* (Opcional) */
+  font-smooth: always;
+  /* (Opcional) */
+  -webkit-font-smoothing: antialiased;
+  /* (Opcional) */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --font-app: Marope, Arial, Helvetica, sans-serif;
+  --grey-100: #fbfdfe;
+  --grey-200: #f9fafb;
+  --grey-300: #ecf0f3;
+  --grey-400: #b7c1c8;
+  --grey-500: #8e9ba4;
+  --grey-600: #687782;
+  --grey-700: #273b49;
+  --grey-800: #28353e;
+  --grey-900: #192229;
+  --green-100: #def7f0;
+  --green-200: #a4ead4;
+  --green-300: #72dfbe;
+  --green-400: #44d5a7;
+  --green-500: #16ca91;
+  --green-600: #12a173;
+  --green-700: #0d7854;
+  --green-800: #063728;
+  --green-900: #052e21;
+  --red-100: #fbd5dc;
+  --red-200: #f6acb9;
+  --red-300: #f28799;
+  --red-400: #ed5e76;
+  --red-500: #e93553;
+  --red-600: #cf1736;
+  --red-700: #9c1128;
+  --red-800: #3c060f;
+  --red-900: #200308;
+  --yellow-100: #fff6e6;
+  --yellow-200: #ffeac7;
+  --yellow-300: #ffdb9e;
+  --yellow-400: #ffce7a;
+  --yellow-500: #ffba42;
+  --yellow-600: #e5a638;
+  --yellow-700: #b4822d;
+  --yellow-800: #3d2c0f;
+  --yellow-900: #332000;
+  --blue-100: #e2f1fd;
+  --blue-200: #a4d6f9;
+  --blue-300: #88c8f7;
+  --blue-400: #62b7f4;
+  --blue-500: #1192ee;
+  --blue-600: #0f80d2;
+  --blue-700: #0c6cb0;
+  --blue-800: #063251;
+  --blue-900: #162936;
+  --height-header: 85px;
+  --bg-ligth: #f3f5f7;
+}
+
+html, body {
+  font-family: var(--font-app);
+  background-color: var(--bg-ligth);
+}
+
+.h-1 {
+  height: 8px;
+}
+
+.w-1 {
+  width: 8px;
+}
+
+.h-2 {
+  height: 16px;
+}
+
+.w-2 {
+  width: 16px;
+}
+
+.h-3 {
+  height: 24px;
+}
+
+.w-3 {
+  width: 24px;
+}
+
+.h-4 {
+  height: 32px;
+}
+
+.w-4 {
+  width: 32px;
+}
+
+.h-5 {
+  height: 40px;
+}
+
+.w-5 {
+  width: 40px;
+}
+
+.h-6 {
+  height: 48px;
+}
+
+.w-6 {
+  width: 48px;
+}
+
+.h-7 {
+  height: 56px;
+}
+
+.w-7 {
+  width: 56px;
+}
+
+.h-8 {
+  height: 64px;
+}
+
+.w-8 {
+  width: 64px;
+}
+
+.icon {
+  color: var(--blue-400);
+}
+
+.btn {
+  border: 0;
+  padding: 0.5em 0.8em;
+  background-color: var(--blue-600);
+  border-radius: 0.5em;
+  color: var(--blue-100);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--blue-500);
+}
+
+.btn--link {
+  display: inline-block;
+  color: white;
+  border-radius: 0.3em;
+}
+
+.btn--view {
+  background-color: #00acc1;
+  color: #e0f7fa;
+}
+.btn--view:hover {
+  background-color: #00bcd4;
+}
+
+.btn--secundary {
+  background-color: var(--grey-600);
+  color: var(--grey-200);
+}
+.btn--secundary:hover {
+  background-color: var(--grey-700);
+  cursor: auto;
+}
+
+.alert__title {
+  color: var(--yellow-700);
+  text-shadow: 2px 2px 2px var(--yellow-400);
+}
+
+.alert__mg {
+  background-color: var(--yellow-100);
+  text-shadow: 1px 2px 2px var(--yellow-200);
+  color: var(--yellow-600);
+  padding: 0.5em 0;
+  border-radius: 0.2em;
+}
+
+.btn-success {
+  background-color: var(--yellow-200);
+  color: var(--yellow-600);
+  font-size: 1rem;
+  padding: 0.5em 1.25em;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-success:hover {
+  background-color: var(--yellow-500);
+  color: var(--yellow-100);
+}
+
+/*# sourceMappingURL=style.css.map */
