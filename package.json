@@ -1,0 +1,21 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Proyecto para construir mi portafolio web",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css --watch",
+    "build": "concurrently \"minify index.html > build/index.html \" \"minify css/style.css >  build/css/style.css\" \"minify js/main.js > build/js/main.js\"  "
+  },
+  "keywords": [
+    "Portafolio",
+    "fullstack",
+    "programacion"
+  ],
+  "author": "Roy Quenider Reategui del Aguila",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "node-sass": "^8.0.0"
+  }
+}
