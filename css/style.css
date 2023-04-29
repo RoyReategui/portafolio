@@ -90,8 +90,7 @@ svg {
 body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: var(--tipo-principal);
-  color: var(--negro);
+  font-family: var(--font-family);
   /* (Opcional) */
   hyphens: auto;
   /* (Opcional) */
@@ -103,59 +102,98 @@ body {
 }
 
 :root {
-  --font-app: Marope, Arial, Helvetica, sans-serif;
-  --grey-100: #fbfdfe;
-  --grey-200: #f9fafb;
-  --grey-300: #ecf0f3;
-  --grey-400: #b7c1c8;
-  --grey-500: #8e9ba4;
-  --grey-600: #687782;
-  --grey-700: #273b49;
-  --grey-800: #28353e;
-  --grey-900: #192229;
-  --green-100: #def7f0;
-  --green-200: #a4ead4;
-  --green-300: #72dfbe;
-  --green-400: #44d5a7;
-  --green-500: #16ca91;
-  --green-600: #12a173;
-  --green-700: #0d7854;
-  --green-800: #063728;
-  --green-900: #052e21;
-  --red-100: #fbd5dc;
-  --red-200: #f6acb9;
-  --red-300: #f28799;
-  --red-400: #ed5e76;
-  --red-500: #e93553;
-  --red-600: #cf1736;
-  --red-700: #9c1128;
-  --red-800: #3c060f;
-  --red-900: #200308;
-  --yellow-100: #fff6e6;
-  --yellow-200: #ffeac7;
-  --yellow-300: #ffdb9e;
-  --yellow-400: #ffce7a;
-  --yellow-500: #ffba42;
-  --yellow-600: #e5a638;
-  --yellow-700: #b4822d;
-  --yellow-800: #3d2c0f;
-  --yellow-900: #332000;
-  --blue-100: #e2f1fd;
-  --blue-200: #a4d6f9;
-  --blue-300: #88c8f7;
-  --blue-400: #62b7f4;
-  --blue-500: #1192ee;
-  --blue-600: #0f80d2;
-  --blue-700: #0c6cb0;
-  --blue-800: #063251;
-  --blue-900: #162936;
-  --height-header: 85px;
-  --bg-ligth: #f3f5f7;
+  --font-family: Marope, Arial, Helvetica, sans-serif;
+  --header-height: 3rem;
+  /*========== Colors =========*/
+  --hue-Color: 250;
+  /* HSL Color Mode*/
+  --first-color: hsl(var(--hue-Color),69%,61%);
+  --first-color-secon: hsl(var(--hue-Color),69%,61%);
+  --first-color-alt: hsl(var(--hue-Color),57%,53%);
+  --first-color-lighter: hsl(var(--hue-Color),92%,85%);
+  --title-color: hsl(var(--hue-Color),8%,15%);
+  --text-color: hsl(var(--hue-Color),8%,45%);
+  --text-color-light: hsl(var(--hue-Color),8%,65%);
+  --input-color: hsl(var(--hue-Color),70%,96%);
+  --body-color: hsl(var(--hue-Color),60%,99%);
+  --container-color: #fff;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --font-semibold: 500;
+  --font-bold: 700;
+  --paddingContainer: 2.5rem ;
 }
 
 html, body {
-  font-family: var(--font-app);
-  background-color: var(--bg-ligth);
+  font-family: var(--font-family);
+  background-color: var(--body-color);
+}
+
+.darkTheme {
+  /* HSL Color Mode*/
+  --first-color-second: hsl(var(--hue-Color),30%,8%);
+  --title-color: hsl(var(--hue-Color),8%,95%);
+  --text-color: hsl(var(--hue-Color),8%,75%);
+  --input-color: hsl(var(--hue-Color),29%,16%);
+  --body-color: hsl(var(--hue-Color),29%,16%);
+  --container-color: hsl(var(--hue-Color), 29%, 16%);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-bold);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+/* ========= ICONOS ========== */
+.icon {
+  color: currentColor;
+  transition: inherit;
+}
+
+.icon:hover {
+  cursor: pointer;
+  font-weight: 800;
+  transform: inherit;
+}
+
+.box {
+  width: 120px;
+  height: 50px;
+  color: darkred;
+}
+
+/* ======== HELPER ===== */
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* ===== CONTAINER ======*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px var(--paddingContainer);
 }
 
 .h-1 {
@@ -222,71 +260,92 @@ html, body {
   width: 64px;
 }
 
-.icon {
-  color: var(--blue-400);
+@media screen and (min-width: 1024px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    --paddingContainer: 3rem ;
+  }
+}
+.header {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: var(--header-height);
+  width: 100vw;
+  border-top: 1px solid var(--input-color);
+  background-color: var(--container-color);
 }
 
-.btn {
-  border: 0;
-  padding: 0.5em 0.8em;
-  background-color: var(--blue-600);
-  border-radius: 0.5em;
-  color: var(--blue-100);
-  font-size: 0.8rem;
-  cursor: pointer;
-}
-.btn:hover {
-  background-color: var(--blue-500);
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.btn--link {
-  display: inline-block;
-  color: white;
-  border-radius: 0.3em;
+.nav__logo {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-bold);
+  color: var(--text-color);
+  z-index: 10;
 }
 
-.btn--view {
-  background-color: #00acc1;
-  color: #e0f7fa;
-}
-.btn--view:hover {
-  background-color: #00bcd4;
-}
-
-.btn--secundary {
-  background-color: var(--grey-600);
-  color: var(--grey-200);
-}
-.btn--secundary:hover {
-  background-color: var(--grey-700);
-  cursor: auto;
+.nav__menu {
+  position: fixed;
+  background-color: var(--container-color);
+  box-shadow: 2px -1px 3px #ccc;
+  border-radius: 10px 10px 0 0;
+  width: 100vw;
+  transition: transform 0.2s;
+  transform: translateY(150%);
+  left: 0;
+  bottom: var(--header-height);
 }
 
-.alert__title {
-  color: var(--yellow-700);
-  text-shadow: 2px 2px 2px var(--yellow-400);
+.menu--show {
+  transform: translateY(0%);
 }
 
-.alert__mg {
-  background-color: var(--yellow-100);
-  text-shadow: 1px 2px 2px var(--yellow-200);
-  color: var(--yellow-600);
-  padding: 0.5em 0;
-  border-radius: 0.2em;
+.nav__list {
+  padding: 2.8em 0;
+}
+.nav__list.grid {
+  display: grid;
+  grid-template: auto/repeat(3, 1fr);
+  align-content: center;
+  justify-items: center;
+  row-gap: 2.8em;
 }
 
-.btn-success {
-  background-color: var(--yellow-200);
-  color: var(--yellow-600);
-  font-size: 1rem;
-  padding: 0.5em 1.25em;
-  font-weight: 600;
-  transition: background-color 0.2s, color 0.2s;
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: var(--font-bold);
+  color: var(--text-color);
+  transition: transform 0.2s;
+}
+.nav__item:hover {
+  color: var(--first-color);
+  transform: scale(1.1);
 }
 
-.btn-success:hover {
-  background-color: var(--yellow-500);
-  color: var(--yellow-100);
+.nav_btns {
+  display: flex;
+  gap: 0.5em;
+  color: var(--text-color);
+  transition: transform 0.2s;
+  z-index: 10;
+}
+.nav_btns .icon:hover {
+  color: var(--first-color);
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

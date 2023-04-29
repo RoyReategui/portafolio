@@ -1,61 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap');
 
 :root {
-    // fonts
-     --font-app:  Marope, Arial, Helvetica, sans-serif;
-    // Colors
-    --grey-100: #fbfdfe;
-    --grey-200: #f9fafb;
-    --grey-300: #ecf0f3;
-    --grey-400: #b7c1c8;
-    --grey-500: #8e9ba4;
-    --grey-600: #687782;
-    --grey-700: #273b49;
-    --grey-800: #28353e;
-    --grey-900: #192229;
+    --font-family:  Marope, Arial, Helvetica, sans-serif;
+    --header-height: 3rem;
 
-    --green-100: #def7f0;
-    --green-200: #a4ead4;
-    --green-300: #72dfbe;
-    --green-400: #44d5a7;
-    --green-500: #16ca91;
-    --green-600: #12a173;
-    --green-700: #0d7854;
-    --green-800: #063728;
-    --green-900: #052e21;
+    /*========== Colors =========*/
+    --hue-Color: 250;
 
-    --red-100: #fbd5dc;
-    --red-200: #f6acb9;
-    --red-300: #f28799;
-    --red-400: #ed5e76;
-    --red-500: #e93553;
-    --red-600: #cf1736;
-    --red-700: #9c1128;
-    --red-800: #3c060f;
-    --red-900: #200308;
+    /* HSL Color Mode*/
+    --first-color: hsl(var(--hue-Color),69%,61%);
+    --first-color-secon: hsl(var(--hue-Color),69%,61%);
+    --first-color-alt: hsl(var(--hue-Color),57%,53%);
+    --first-color-lighter: hsl(var(--hue-Color),92%,85%);
+    --title-color: hsl(var(--hue-Color),8%,15%);
+    --text-color: hsl(var(--hue-Color),8%,45%);
+    --text-color-light: hsl(var(--hue-Color),8%,65%);
+    --input-color: hsl(var(--hue-Color),70%,96%);
+    --body-color: hsl(var(--hue-Color),60%,99%);
+    --container-color : #fff;
 
-    --yellow-100: #fff6e6;
-    --yellow-200: #ffeac7;
-    --yellow-300: #ffdb9e;
-    --yellow-400: #ffce7a;
-    --yellow-500: #ffba42;
-    --yellow-600: #e5a638;
-    --yellow-700: #b4822d;
-    --yellow-800: #3d2c0f;
-    --yellow-900: #332000;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
 
-    --blue-100: #e2f1fd;
-    --blue-200: #a4d6f9;
-    --blue-300: #88c8f7;
-    --blue-400: #62b7f4;
-    --blue-500: #1192ee;
-    --blue-600: #0f80d2;
-    --blue-700: #0c6cb0;
-    --blue-800: #063251;
-    --blue-900: #162936;
-    --height-header: 85px;
+    --font-semibold: 500;
+    --font-bold: 700;
 
-    --bg-ligth: #f3f5f7;
+    --paddingContainer: 2.5rem ;
+
 }   
 
 $height-containInput: 2.8rem;

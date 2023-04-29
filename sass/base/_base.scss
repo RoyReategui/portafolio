@@ -2,8 +2,83 @@
 @use '../abstract/mixins' as mx;
 
 html, body {
-    font-family: var(--font-app);
-    background-color: var(--bg-ligth);
+    font-family: var(--font-family);
+    background-color: var(--body-color);
 }
 
+.darkTheme {
+    /* HSL Color Mode*/
+    --first-color-second: hsl(var(--hue-Color),30%,8%);
+    --title-color: hsl(var(--hue-Color),8%,95%);
+    --text-color: hsl(var(--hue-Color),8%,75%);
+    --input-color: hsl(var(--hue-Color),29%,16%);
+    --body-color: hsl(var(--hue-Color),29%,16%);
+    --container-color : hsl(var(--hue-Color), 29%, 16%);
+}
+
+h1
+,h2
+,h3{
+   font-weight: var(--font-bold); 
+}
+h1{
+    font-size: var(--h1-font-size);
+}
+h2{
+    font-size: var(--h2-font-size);
+}
+h3{
+    font-size: var(--h3-font-size);
+}
+
+/* ========= ICONOS ========== */
+.icon {
+    color: currentColor;
+    transition: inherit;
+}
+.icon:hover {
+    cursor: pointer;
+    font-weight: 800;
+    transform: inherit;
+}
+
+.box{
+    width: 120px;
+    height: 50px;
+    color: darkred;
+}
+
+/* ======== HELPER ===== */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+/* ===== CONTAINER ======*/
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px  var(--paddingContainer) ;
+}
+
+
 @include mx.sizeIcon(8);
+
+@include mx.mq(large){
+    :root{
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+
+        --paddingContainer: 3rem ;
+    }
+}

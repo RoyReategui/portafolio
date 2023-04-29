@@ -1,0 +1,11 @@
+{
+    "versionlens.composer.http.strictSSL": null,
+    "todohighlight.keywords": [],
+    "editor.fontVariations": false,
+    "css.format.braceStyle": "collapse",
+    "css.format.enable": true,
+    "editor.fontLigatures": false,
+    "[css]": {
+        "editor.autoIndent": "full"
+    }
+}
