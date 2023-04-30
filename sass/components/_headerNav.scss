@@ -2,17 +2,18 @@
 
 .header{
     position: fixed;
+    z-index: 100;
     bottom: 0;
     right: 0;
     height: var(--header-height);
-    width: 100vw;
+    width: 100%;
     border-top: 1px solid var(--text-color);
     background-color: var(--container-color);
-
+    
     @include mx.mq(medium){
         position: static;
+        border: none;
     }
-
 }
 
 .nav {
@@ -37,7 +38,7 @@
     background-color: var(--container-color);
     box-shadow: 2px -1px 3px #ccc;
     border-radius: 10px 10px 0 0;
-    width: 100vw;
+    width: 100%;
     transition: transform .2s;
     transform: translateY(150%);
 
@@ -46,7 +47,7 @@
     // display: flex;
 
     @include mx.mq(medium){
-        .icon{
+        .icon {
             display: none;
         }
 
@@ -59,13 +60,12 @@
     }
 }
 
-.menu--show{
-    transform: translateY(0%);
+.menu--show {
+    transform: translateY(0);
 }
 
-.nav__list{
+.nav__list {
     $padding-y: 2.8em;
-
     padding: $padding-y 0;
     display: grid;
     grid-template: auto /repeat(3, 1fr);
@@ -82,11 +82,11 @@
 }
 
 .nav__item{
+    align-items: center;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-weight:  var(--font-bold);
-    color: var(--text-color);
     transition: transform .2s;
 
     &:hover{
@@ -96,9 +96,9 @@
 }
 
 .nav_btns{
+    color: var(--text-color);
     display: flex;
     gap: 1em;
-    color: var(--text-color);
     transition: transform .2s;
     z-index: 10;
     .icon:hover{

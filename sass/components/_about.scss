@@ -1,0 +1,102 @@
+@use '../abstract/mixins' as mx;
+
+.home-section{
+    width: 100%;
+    --sizeFigure: 55vw;
+    --sizeSocial: 10vw;
+}
+.home{
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 355px;
+    color: var(--text-color);
+    gap: 2rem;
+
+    align-content: center;
+
+    @include mx.mq(medium){
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    // justify-content: center;
+}
+.home__aside{
+    width: var(--sizeSocial);
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .home__listSocial{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 2rem;
+        // align-items: ;
+        height: 100%;
+    }
+    .icon{
+        width: 24px;
+        height: 24px;
+        transition: transform .2s,
+                    color .2s;
+
+        &:hover {
+            transform: scale(1.1);
+            color: var(--first-color);
+        }
+    }
+}
+
+.home__figure{
+    // height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    background-color: var(--first-color);
+    border-top-left-radius: 70% 70%;
+    border-top-right-radius: 70% 70%;
+    border-bottom-right-radius: 50% 70%;
+    border-bottom-left-radius: 50% 70%;
+    height: var(--sizeFigure);
+    min-width: var(--sizeFigure);
+    width: var(--sizeFigure);
+    padding: 2em 2em 0em 2em;
+    position: relative;
+
+    @include mx.mq(medium){
+        --sizeFigure: 250px;
+        order: 2;
+    }
+}
+.home__img{
+    position: absolute;
+}
+
+.home__body {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    order: 2;
+    padding: 1em 0;
+
+    .home__name{
+        font-size: var(--h1-font-size);
+        font-weight: 800;
+        color: var(--title-color)
+    }
+    .home__info{
+        padding-top: .5em;
+        font-size: var(--h3-font-size);
+        font-weight: 600;
+    }
+    @include mx.mq(medium){
+        width: 30vw;
+        order: 1;
+    }
+}
+

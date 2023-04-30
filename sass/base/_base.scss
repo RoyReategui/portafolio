@@ -3,6 +3,14 @@
 
 // @include mx.sizeIcon(8);
 
+
+@include mx.mq(medium){
+    :root{
+        --header-height: 5rem;
+        --paddingContainer: 5rem
+    }
+}
+
 @include mx.mq(large){
     :root{
         --big-font-size: 3rem;
@@ -13,23 +21,25 @@
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
 
-        --paddingContainer: 3rem ;
+        --paddingContainer: 10rem ;
     }
 }
+
 
 html, body {
     font-family: var(--font-family);
     background-color: var(--body-color);
+    min-height: 100vh;
 }
 
 .darkTheme {
     /* HSL Color Mode*/
-    --first-color-second: hsl(var(--hue-Color),30%,8%);
-    --title-color: hsl(var(--hue-Color),8%,95%);
-    --text-color: hsl(var(--hue-Color),8%,75%);
-    --input-color: hsl(var(--hue-Color),29%,16%);
-    --body-color: hsl(var(--hue-Color),29%,16%);
-    --container-color : hsl(var(--hue-Color), 29%, 16%);
+    --first-color-second: hsl(var(--hue-color),30%,8%);
+    --title-color: hsl(var(--hue-color),8%,95%);
+    --text-color: hsl(var(--hue-color),8%,75%);
+    --input-color: hsl(var(--hue-color),29%,16%);
+    --body-color: hsl(var(--hue-color),28%,12%);
+    --container-color : hsl(var(--hue-color), 29%, 16%);
 }
 
 h1
@@ -50,8 +60,7 @@ h3{
 /* ========= ICONOS ========== */
 .icon {
     color: currentColor;
-    transition: inherit;
-
+    
     @include mx.mq(medium){
         width: 24px;
         height: 24px;
@@ -60,7 +69,6 @@ h3{
 .icon:hover {
     cursor: pointer;
     font-weight: 800;
-    transform: inherit;
 }
 
 /* ======== HELPER ===== */
@@ -72,6 +80,27 @@ h3{
     display: block;
 }
 
+/* ===== BUTTONS ====== */
+
+.btn{
+    background-color: var(--first-color);
+    color: white;
+    padding: 1.2em 1em;
+    gap: .8em;
+    width: fit-content;
+    border-radius: .5em;
+
+    &:hover{
+        cursor: pointer;
+        background-color: var(--first-color-alt);
+    }
+}
+
+.btn--flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* ===== CONTAINER ======*/
 

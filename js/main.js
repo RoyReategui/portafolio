@@ -1,6 +1,6 @@
 /* ===== Components ==== */
 const body = document.getElementById('body')
-const menuNav = document.getElementById('nav__Menu')
+const menuNav = document.getElementById('nav__menu')
 
 
 /* ===== ICONS =====  */
