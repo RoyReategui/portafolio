@@ -1,11 +1,18 @@
+@use '../abstract/mixins' as mx;
+
 .header{
     position: fixed;
     bottom: 0;
     right: 0;
     height: var(--header-height);
     width: 100vw;
-    border-top: 1px solid var(--input-color);
+    border-top: 1px solid var(--text-color);
     background-color: var(--container-color);
+
+    @include mx.mq(medium){
+        position: static;
+    }
+
 }
 
 .nav {
@@ -13,6 +20,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include mx.mq(medium){
+        gap: 2rem;
+    }
 }
 
 .nav__logo{
@@ -34,6 +44,19 @@
     left: 0;
     bottom: var(--header-height);
     // display: flex;
+
+    @include mx.mq(medium){
+        .icon{
+            display: none;
+        }
+
+        position: static;
+        transform: none;
+        width: 100%;
+        border-radius: 0s;
+        box-shadow: none;
+        font-size: 1.2rem;
+    }
 }
 
 .menu--show{
@@ -44,14 +67,18 @@
     $padding-y: 2.8em;
 
     padding: $padding-y 0;
-    &.grid{
-        display: grid;
-        grid-template: auto /repeat(3, 1fr);
-        align-content: center;
-        justify-items: center;
-        row-gap: $padding-y;
-    }
+    display: grid;
+    grid-template: auto /repeat(3, 1fr);
+    align-content: center;
+    justify-items: center;
+    row-gap: $padding-y;
 
+    @include mx.mq(medium){
+       display:flex ;
+       justify-content: end;
+       gap: 2rem;
+       padding: 0;
+    }
 }
 
 .nav__item{
@@ -62,7 +89,6 @@
     color: var(--text-color);
     transition: transform .2s;
 
-
     &:hover{
         color: var(--first-color);
         transform: scale(1.1);
@@ -71,12 +97,18 @@
 
 .nav_btns{
     display: flex;
-    gap: .5em;
+    gap: 1em;
     color: var(--text-color);
     transition: transform .2s;
     z-index: 10;
     .icon:hover{
         color: var(--first-color);
         transform: scale(1.1);
+    }
+    .icon--close,
+    .icon--multibox {
+        @include mx.mq(medium){
+            display: none;
+        }
     }
 }

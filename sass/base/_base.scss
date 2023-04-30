@@ -1,6 +1,22 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as mx;
 
+// @include mx.sizeIcon(8);
+
+@include mx.mq(large){
+    :root{
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+
+        --paddingContainer: 3rem ;
+    }
+}
+
 html, body {
     font-family: var(--font-family);
     background-color: var(--body-color);
@@ -35,17 +51,16 @@ h3{
 .icon {
     color: currentColor;
     transition: inherit;
+
+    @include mx.mq(medium){
+        width: 24px;
+        height: 24px;
+    }
 }
 .icon:hover {
     cursor: pointer;
     font-weight: 800;
     transform: inherit;
-}
-
-.box{
-    width: 120px;
-    height: 50px;
-    color: darkred;
 }
 
 /* ======== HELPER ===== */
@@ -67,18 +82,3 @@ h3{
 }
 
 
-@include mx.sizeIcon(8);
-
-@include mx.mq(large){
-    :root{
-        --big-font-size: 3rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
-
-        --paddingContainer: 3rem ;
-    }
-}

@@ -22,7 +22,6 @@ const toggleTheme = () => {
     iconMoon.classList.toggle('hidden')
 }
 
-
 /*========= EVENTOS ======== */
 
 iconMultiBox.addEventListener('click', toggleShowMenu )
