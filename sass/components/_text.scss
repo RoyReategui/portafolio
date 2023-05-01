@@ -1,0 +1,27 @@
+@use '../abstract/mixins' as mx;
+.title {
+    color: var(--title-color);
+    font-size: var(--h1-font-size);
+    font-weight: 800;
+
+    @include mx.mq(xlarge){
+        font-size: var(--big-font-size);
+    }
+
+}
+.subTitle {
+    font-size: var(--h3-font-size);
+    font-weight: 600;
+    padding-top: .5em;
+
+    @include mx.mq(large){
+        font-size: var(--h2-font-size);
+    }
+}
+
+.text {
+    color: var(--text-color);
+    font-size: var(--font-size);
+
+
+}
