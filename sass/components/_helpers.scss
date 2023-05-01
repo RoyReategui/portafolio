@@ -1,0 +1,16 @@
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px  var(--paddingContainer) ;
+}
+

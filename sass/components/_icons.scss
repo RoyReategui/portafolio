@@ -1,0 +1,17 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as mx;
+
+.icon {
+    color: currentColor;
+    transition: transform .2s;
+    
+    @include mx.mq(medium) {
+        height: 24px;
+        width: 24px;
+    }
+}
+.icon:hover {
+    cursor: pointer;
+    font-weight: 800;
+    transform: scale(1.1);
+}

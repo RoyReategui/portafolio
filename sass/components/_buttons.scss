@@ -1,0 +1,20 @@
+
+.btn {
+    background-color: var(--first-color);
+    border-radius: .5em;
+    color: white;
+    gap: .8em;
+    padding: 1.2em 1em;
+    width: fit-content;
+
+    &:hover {
+        background-color: var(--first-color-alt);
+        cursor: pointer;
+    }
+}
+
+.btn--flex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

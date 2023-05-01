@@ -1,5 +1,11 @@
 @forward "base/reset";
 @forward "base/base";
 
-@forward "components/headerNav";
-@forward "components/about";
+@forward "components/buttons";
+@forward "components/icons";
+@forward "components/helpers";
+
+@forward "layout/headerNav";
+@forward "layout/about";
+
+@forward "themes/dark-theme"
