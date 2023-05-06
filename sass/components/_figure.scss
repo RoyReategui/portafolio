@@ -1,0 +1,38 @@
+@use '../abstract/mixins' as mx;
+.figure {
+    background-color: var(--first-color);
+    display: flex;
+    grid-area: img;
+    height: var(--sizeFigure);
+    justify-content: center;
+    order: 1;
+    overflow: hidden;
+    padding: 2em 2em 0em 2em;
+    position: relative;
+    width: var(--sizeFigure);
+
+    img{
+        position: absolute;
+    }
+
+    @include mx.mq(small){
+        --sizeFigure: 160px;
+    }
+    @include mx.mq(medium){
+        --sizeFigure: 220px;
+    }
+    @include mx.mq(large){
+        --sizeFigure: 250px;
+    }
+}
+
+.figure--semicircle{
+    border-bottom-left-radius: 50% 70%;
+    border-bottom-right-radius: 50% 70%;
+    border-top-left-radius: 70% 70%;
+    border-top-right-radius: 70% 70%;
+}
+
+.figure--square {
+    border-radius: 1em;
+}

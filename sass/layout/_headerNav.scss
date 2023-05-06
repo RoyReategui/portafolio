@@ -12,7 +12,8 @@
     
     @include mx.mq(medium){
         border: none;
-        position: static;
+        position: fixed;
+        top: 0;
     }
 }
 

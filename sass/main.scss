@@ -2,12 +2,16 @@
 @forward "base/base";
 
 @forward "components/text";
+@forward "components/box";
+@forward "components/figure";
 @forward "components/section";
 @forward "components/buttons";
 @forward "components/icons";
 @forward "components/helpers";
 
 @forward "layout/headerNav";
+@forward "layout/home";
 @forward "layout/about";
+@forward "layout/skills";
 
 @forward "themes/dark-theme"
