@@ -108,18 +108,18 @@ body {
   --header-height: 3rem;
   --sizeFigure: 180px;
   /*========== Colors =========*/
-  --hue-color:250;
+  --hue-color: 250;
   /* HSL Color Mode*/
-  --first-color: hsl(var(--hue-color),69%,61%);
-  --first-color-secon: hsl(var(--hue-color),69%,61%);
-  --first-color-alt: hsl(var(--hue-color),57%,53%);
-  --first-color-lighter: hsl(var(--hue-color),92%,85%);
-  --title-color: hsl(var(--hue-color),8%,15%);
-  --text-color: hsl(var(--hue-color),8%,45%);
-  --text-color-light: hsl(var(--hue-color),8%,65%);
-  --input-color: hsl(var(--hue-color),70%,96%);
-  --body-color: hsl(var(--hue-color),60%,99%);
-  --body-color-secon: hsl(var(--hue-color),50%,97%);
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-secon: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --body-color-secon: hsl(var(--hue-color), 50%, 97%);
   --container-color: #fff;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
@@ -130,7 +130,7 @@ body {
   --smaller-font-size: .75rem;
   --font-semibold: 500;
   --font-bold: 700;
-  --paddingContainer: 2.5rem ;
+  --paddingContainer: 2.5rem;
 }
 
 @media screen and (min-width: 760px) {

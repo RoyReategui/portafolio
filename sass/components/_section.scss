@@ -1,6 +1,6 @@
 @use '../abstract/mixins' as mx;
 
-.section  {
+.section {
     width: 100%;
     // min-height: calc(100vh + var(--header-height));
     min-height: 100vh;
@@ -21,16 +21,16 @@
     }
 }
 
-.section:nth-child(odd){
-    background-color:  var(--body-color-secon);
+.section:nth-child(odd) {
+    background-color: var(--body-color-secon);
 }
-
 
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-     }
+    }
 }
